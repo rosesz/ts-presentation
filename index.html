@@ -302,7 +302,7 @@ class MyPoint implements IPoint {
             
         <section>
           <h2>Generics</h2>
-          Instead of:
+          <small>Instead of:</small>
           <pre><code class="ts" data-trim contenteditable>
 function identity(arg: number): number {
     return arg;
@@ -313,12 +313,12 @@ function identity(arg: any): any {
     return arg;
 }
           </code></pre>
-          It's possible to work over a variety of types rather than a single one:
+          <small>It's possible to work over a variety of types rather than a single one:</small>
           <pre><code class="ts" data-trim contenteditable>
-function identity<T>(arg: T): T {
+function identity&lt;T&gt;(arg: T): T {
     return arg;
 }
-let output = identity<string>("myString");  // type of output will be 'string'
+let output = identity&lt;string&gt;("myString");  // type of output will be 'string'
 let output = identity("myString");  // type of output will be 'string'
           </code></pre>
         </section>
